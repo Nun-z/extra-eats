@@ -4,6 +4,7 @@
   "description": "Extra Eats API Server",
   "main": "server.js",
   "scripts": {
+    "start": "server.js"
     "test": "mocha ./src/tests --recursive"
   },
   "author": "jonnylin13",
