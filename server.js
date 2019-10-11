@@ -8,7 +8,7 @@ const app = express();
 
 const routes = require('./src/routes');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
