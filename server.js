@@ -1,5 +1,6 @@
 'use strict';
 
+require('@google-cloud/debug-agent').start();
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
