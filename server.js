@@ -1,6 +1,10 @@
 'use strict';
 
-require('@google-cloud/debug-agent').start();
+require('@google-cloud/debug-agent').start({
+  allowExpressions: true,
+  projectId: process.env.GOOGLE_CLOUD_PROJECT_ID,
+});
+
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
