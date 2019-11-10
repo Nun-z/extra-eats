@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'dart:async';
 
 import '../models/post.dart';
-import '../data/client.dart';
+import '../client.dart';
 import '../actions.dart';
 
 class PostView extends StatelessWidget {

@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'dart:io';
 import 'dart:async';
 
-import '../data/client.dart';
+import '../client.dart';
 import '../actions.dart';
 
 class SubmitPost extends StatefulWidget {

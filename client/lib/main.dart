@@ -9,7 +9,7 @@ import './pages/settings.dart';
 import './pages/submit_post.dart';
 import './pages/login.dart';
 import './actions.dart';
-import './data/client.dart';
+import './client.dart';
 
 void main() => runApp(TasteTheWaste());
 
