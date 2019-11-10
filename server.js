@@ -1,9 +1,6 @@
 'use strict';
 
-require('@google-cloud/debug-agent').start({
-  allowExpressions: true,
-  projectId: process.env.GOOGLE_CLOUD_PROJECT_ID,
-});
+require('@google-cloud/debug-agent').start({ allowExpressions: true });
 
 const express = require('express');
 const bodyParser = require('body-parser');
