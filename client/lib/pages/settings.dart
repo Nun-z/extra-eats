@@ -122,13 +122,20 @@ class _SettingsState extends State<Settings> {
               leading: Icon(Icons.fastfood),
               title: Text('Hygiene guidelines',
                   style: TextStyle(fontWeight: FontWeight.w300)),
-              onTap: () {} //nothing yet
+              //TODO
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HygieneGuidelines())); }
               ),
           ListTile(
               leading: Icon(Icons.assignment),
               title:
                   Text('Legal', style: TextStyle(fontWeight: FontWeight.w300)),
-              onTap: () {} //nothing yet
+              //TODO
+              onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LegalInfo())); }
               ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
@@ -146,5 +153,52 @@ class _SettingsState extends State<Settings> {
                 child: Text('Save'),
                 onPressed: savePreferences),
         ]);
+  }
+}
+
+class HygieneGuidelines extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Hygiene guidelines"),
+        ),
+        body: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.all(20.0),
+          children: <Widget>[
+            const Text('"My name is Ozymandius, king of kings:'),
+            const Text('Look on my works ye mighty, and despair!"'),
+            const Text('Nothing beside remains.  Round the decay'),
+            const Text('Of that collossal wreck, boundless and bare'),
+            const Text('The lone and level sands stretch far away.'),
+          ],
+        )
+    );
+  }
+}
+
+class LegalInfo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Legal"),
+        ),
+        body: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.all(20.0),
+          children: <Widget>[
+            const Text('so much depends'),
+            const Text('upon'),
+            const Text('a red wheel'),
+            const Text('barrow'),
+            const Text('glazed with rain'),
+            const Text('water'),
+            const Text('beside the white'),
+            const Text('chickens'),
+          ],
+        )
+    );
   }
 }
