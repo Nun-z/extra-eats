@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../actions.dart';
 
+const List EventPlannerWhitelist =
+[
+  'testplan@scu.edu',
+  'plantest@scu.edu',
+  'fakeplanner@scu.edu',
+  'approvedplanner@scu.edu',
+  'approvedplanner2@scu.edu'
+];
+
 var _logo = Padding(
   padding: EdgeInsets.only(top:50, bottom:5),
   child:
@@ -86,6 +95,14 @@ class _RegisterState extends State<Register> {
                       passwordController.text.length <= 5) {
                     String alertMsg =
                         "Please enter your email and a password with 6 characters or more";
+                    alertDialog(context, alertMsg);
+                    passwordController.clear();
+                    return;
+                  }
+                  //TODO: add whitelist here
+                  if (!EventPlannerWhitelist.contains(emailController.text) && this._provider == true)
+                  {
+                    String alertMsg = "You are not approved to be an event planner.";
                     alertDialog(context, alertMsg);
                     passwordController.clear();
                     return;
