@@ -167,6 +167,7 @@ class HygieneGuidelines extends StatelessWidget {
           shrinkWrap: true,
           padding: const EdgeInsets.all(20.0),
           children: <Widget>[
+            const Text('And on the pedestal these words appear'),
             const Text('"My name is Ozymandius, king of kings:'),
             const Text('Look on my works ye mighty, and despair!"'),
             const Text('Nothing beside remains.  Round the decay'),
