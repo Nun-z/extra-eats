@@ -27,7 +27,7 @@ class PostView extends StatelessWidget {
       Text(
           'Expires at ' +
               DateFormat('h:mm a on MMM d')
-                  .format(this.post.expiration.toLocal()),
+                  .format(this.post.expiration),
           style: TextStyle(fontWeight: FontWeight.w300, fontSize: 12)),
       if (this.post.tags.length > 0)
         Padding(child: Text('May Contain:'), padding: EdgeInsets.only(top: 15)),
