@@ -7,7 +7,7 @@ exports.updatePostStatus = function() {
 		/*
 			when submitting a post, send a Date object to the server if it 
 		*/
-		var rightNow = new Date(); 
+		var rightNow = Date(); 
 		var hour = rightNow.getHours(); 
 		var minutes = rightNow.getMinutes(); 
 		var dayOfWeek = rightNow.getDay(); 
