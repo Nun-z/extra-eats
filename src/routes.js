@@ -359,7 +359,7 @@ router
         $lte: now
       };
 
-      Post.find({ expiration: { $lt: now }},   function(err, posts) {
+      Post.find({ expiration: { $gt: now }},   function(err, posts) {
         if (err) {
           console.log(err);
           return;
