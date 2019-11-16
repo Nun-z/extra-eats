@@ -354,9 +354,9 @@ router
       let tags = [];
       if (req.body.tags) tags = req.body.tags;
       let filter = tags.length === 0 ? {status: 'active'} : { tags: tags, status: 'active' };
-      let now = new Date();
+      let now = new Date(2019, 11, 14);
       filter['expiration'] = {
-        $gt: now
+        $gte: now
       };
 
       Post.find({ expiration: { $lt: now }},   function(err, posts) {
