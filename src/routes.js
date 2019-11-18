@@ -372,7 +372,11 @@ router
       let now = Date();
 >>>>>>> parent of 288cbda... Fixes.
       filter['expiration'] = {
+<<<<<<< HEAD
         $gte: now
+=======
+        $gte: new Date(now.toISOString());
+>>>>>>> parent of d28ac1e... Another attempt at a fix.
       };
 
       Post.find({ expiration: { $lt: now }},   function(err, posts) {
