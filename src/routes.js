@@ -311,7 +311,7 @@ router
           expiration: req.body.expiryDate,
           creator: user._id,
           status: status,
-          scheduledDay: postDate.getDate(),
+          scheduledDay: postDate.getDay(),
           scheduledMonth: postDate.getMonth() + 1, 
           scheduledHour: postDate.getHours(),
           scheduledMinute: postDate.getMinutes()
