@@ -337,6 +337,7 @@ router
               });
             }
             push(req.body.name, req.body.description).then(response => {
+              console.log("here"); 
               return res.json({ message: 'Posted!', code: 1 });
             });
           });
@@ -354,12 +355,16 @@ router
       if (req.body.tags) tags = req.body.tags;
       let filter = tags.length === 0 ? {status: 'active'} : { tags: tags, status: 'active' };
 <<<<<<< HEAD
+<<<<<<< HEAD
       let now = new Date().getTime();
 =======
       let now = Date();
 >>>>>>> parent of 288cbda... Fixes.
+=======
+      let now = new Date(2019, 11, 14);
+>>>>>>> parent of 8ed5fc5... Revert this.
       filter['expiration'] = {
-        $gte: now 
+        $gte: now
       };
 
       Post.find({ expiration: { $lt: now }},   function(err, posts) {
