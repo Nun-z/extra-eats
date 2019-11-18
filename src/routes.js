@@ -299,7 +299,7 @@ router
           status = 'active'
         }
 
-        let postDate = new Date(req.body.postDate); 
+        let postDate = Date(req.body.postDate); 
 
         let post = new Post({
           name: req.body.name,
@@ -357,6 +357,7 @@ router
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       let now = new Date().getTime();
 =======
       let now = Date();
@@ -367,6 +368,9 @@ router
 =======
       let now = new Date();
 >>>>>>> parent of 340dcd8... Hopefully this fixed the issue with date comparison.
+=======
+      let now = Date();
+>>>>>>> parent of 288cbda... Fixes.
       filter['expiration'] = {
         $gte: now
       };
