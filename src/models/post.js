@@ -34,7 +34,7 @@ var PostSchema = new Schema({
     required: true
   },
   expiration: {
-    type: Date,
+    type: Number,
     required: true
   }, 
   scheduledDay: {

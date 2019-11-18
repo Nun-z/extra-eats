@@ -337,7 +337,6 @@ router
               });
             }
             push(req.body.name, req.body.description).then(response => {
-              console.log("here"); 
               return res.json({ message: 'Posted!', code: 1 });
             });
           });
@@ -354,9 +353,9 @@ router
       let tags = [];
       if (req.body.tags) tags = req.body.tags;
       let filter = tags.length === 0 ? {status: 'active'} : { tags: tags, status: 'active' };
-      let now = new Date(2019, 11, 14);
+      let now = new Date().getTime();
       filter['expiration'] = {
-        $gte: now
+        $gte: now 
       };
 
       Post.find({ expiration: { $lt: now }},   function(err, posts) {
