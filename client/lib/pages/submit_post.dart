@@ -20,7 +20,7 @@ class _SubmitPostState extends State<SubmitPost> {
   TextEditingController nameController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
   TextEditingController locationController = TextEditingController();
-  DateTime postTime = DateTime.now();
+  DateTime postTime = DateTime.now().add(new Duration(hours: 8));
   bool _isScheduled = false;
   List<int> _selectedAllergens = new List<int>();
   List<String> _allergens = [
