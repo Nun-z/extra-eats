@@ -299,7 +299,7 @@ router
           status = 'active'
         }
 
-        let postDate = Date(req.body.postDate); 
+        let postDate = new Date(req.body.postDate); 
 
         let post = new Post({
           name: req.body.name,
@@ -337,7 +337,6 @@ router
               });
             }
             push(req.body.name, req.body.description).then(response => {
-              console.log("here"); 
               return res.json({ message: 'Posted!', code: 1 });
             });
           });
@@ -355,7 +354,7 @@ router
       if (req.body.tags) tags = req.body.tags;
       let filter = tags.length === 0 ? {status: 'active'} : { tags: tags, status: 'active' };
       let now = new Date();
-
+        
       filter['expiration'] = {
         $gte: now
       };
