@@ -7,7 +7,9 @@ require('dotenv').config();
 const shortid = require('shortid');
 const upload = require('./upload');
 const cloudinary = require('cloudinary').v2;
+const GoogleSpreadsheet = require('google-spreadsheet');
 
+const Planner = require('./models/planner');
 const User = require('./models/user');
 const Post = require('./models/post');
 const Mailer = require('./mailer');
@@ -84,6 +86,34 @@ router.route('/login').post(function(req, res) {
   });
 });
 
+// Event planners
+router
+    .route('/planners')
+    .send(function(req, res) {
+        var doc = new GoogleSpreadsheet('1pV8IUPm4rq0x397trDoFmI14mwJdws3AshCBjs57Pps');
+        
+        var emails = [];
+        var length = rows.length
+    
+        for (var i = 0; i < rows.length; i++) {
+            emails.push(rows[i].email);
+        }
+    
+        posts.push(emails);
+        res.json({message: 'emails sent to database'});
+    })
+    .get(function(req, res) {
+        let token = req.headers['x-access-token'];
+        jwt.verify(token, process.env.SECRET, function(err, decoded) {
+            if (err) return _unauthorized(res);
+        });
+        Planner.find(function(err, planners) {
+            if (err) return res.send(err);
+            res.json(planners);
+        });
+  });
+          
+         
 // Users
 router
   .route('/users')

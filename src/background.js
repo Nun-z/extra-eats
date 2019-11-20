@@ -1,6 +1,13 @@
 let cron = require('node-cron'); 
 var mongoose = require('mongoose');
 var post = require('./models/post.js'); 
+var planners = require('./models/planner.js')
+
+exports.getPlanners = function() {
+    cron.schedule('* * 1 * *', function() {
+        planners.send();
+    }
+}
 
 exports.updatePostStatus = function() {
 	cron.schedule('* * * * *', function() {
