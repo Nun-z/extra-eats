@@ -75,4 +75,6 @@ class Client {
         options: Options(headers: {'x-access-token': token, 'id': postId}));
     return response;
   }
+
+  //TODO: get event planners
 }
