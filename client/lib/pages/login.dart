@@ -8,8 +8,9 @@ const List EventPlannerWhitelist =
   'plantest@scu.edu',
   'fakeplanner@scu.edu',
   'approvedplanner@scu.edu',
-  'approvedplanner2@scu.edu'
-];
+  'approvedplanner2@scu.edu',
+  'sabucher@scu.edu'
+]
 
 var _logo = Padding(
   padding: EdgeInsets.only(top:50, bottom:5),
