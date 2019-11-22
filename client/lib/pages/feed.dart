@@ -24,8 +24,10 @@ class PostView extends StatelessWidget {
       ),
       Text(this.post.description,
           style: TextStyle(fontWeight: FontWeight.w300, fontSize: 16)),
+      Text('\n\nPlease bring a container for your food, as one may not be provided.',
+          style: TextStyle(fontWeight: FontWeight.w300, fontSize: 16)),
       Text(
-          'Expires at ' +
+          '\n\nExpires at ' +
               DateFormat('h:mm a on MMM d')
                   .format(this.post.expiration.toLocal()),
           style: TextStyle(fontWeight: FontWeight.w300, fontSize: 12)),
