@@ -20,7 +20,7 @@ class _SubmitPostState extends State<SubmitPost> {
   TextEditingController nameController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
   TextEditingController locationController = TextEditingController();
-  DateTime postTime = DateTime.now().add(new Duration(hours: 8));
+  DateTime postTime = DateTime.now();
   bool _isScheduled = false;
   List<int> _selectedAllergens = new List<int>();
   List<String> _allergens = [
@@ -299,6 +299,10 @@ class _SubmitPostState extends State<SubmitPost> {
                 textColor: Colors.white,
                 child: !_isScheduled ? Text('Post Now') : Text('Schedule Post'),
                 onPressed: () {
+
+                  // add time offset to match server timezone
+                  postTime = postTime.add(new Duration(hours: 8));
+
                   // when a post does not have all necessary fields,
                   // will give a list of what fields the post is missing
                   Set<String> fields = {
@@ -308,6 +312,10 @@ class _SubmitPostState extends State<SubmitPost> {
                     if (locationController.text == '') 'location',
                   };
                   if (fields.length != 0) {
+
+                    // subtract time offset to match user's timezone
+                    postTime = postTime.subtract(new Duration(hours: 8));
+
                     String alertMsg = "Please add the following field" +
                         (fields.length > 1 ? "s" : "") +
                         " to your post: ";
