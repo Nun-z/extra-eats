@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'dart:async';
+import 'dart:io';
 
 import '../models/post.dart';
 import '../client.dart';
@@ -185,6 +186,7 @@ void alertDialog(
               Navigator.of(context).pop();
               Client.get()
                   .deletePost(InheritedClient.of(context).accessToken, post.id);
+              sleep(const Duration(seconds:2));
               reload(); //reload the page
             },
           ),
