@@ -381,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 62Z8CT4APJ;
 				ENABLE_BITCODE = NO;
 				FLUTTER_ROOT = /Users/Nick/Downloads/flutter;
@@ -395,7 +395,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				MARKETING_VERSION = 0.92;
+				MARKETING_VERSION = 0.95;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.extraeats.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Store Provisioning Profile";
@@ -520,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 62Z8CT4APJ;
 				ENABLE_BITCODE = NO;
 				FLUTTER_ROOT = /Users/Nick/Downloads/flutter;
@@ -534,7 +534,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				MARKETING_VERSION = 0.92;
+				MARKETING_VERSION = 0.95;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.extraeats.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Store Provisioning Profile";
@@ -550,7 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 62Z8CT4APJ;
 				ENABLE_BITCODE = NO;
 				FLUTTER_ROOT = /Users/Nick/Downloads/flutter;
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				MARKETING_VERSION = 0.92;
+				MARKETING_VERSION = 0.95;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.extraeats.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Store Provisioning Profile";
