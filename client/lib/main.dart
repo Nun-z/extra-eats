@@ -79,7 +79,7 @@ class _TasteTheWasteState extends State<TasteTheWaste> {
       this._userId = res.data['user_id'];
       this._provider = res.data['provider'];
       if (Platform.isAndroid) {
-        OneSignal.shared.init('6d50216a-231d-4cf5-9abd-7928d4f020fb');
+        OneSignal.shared.init('60abb7d4-abef-45cf-96c1-15ffe57a9790');
         OneSignal.shared
             .setInFocusDisplayType(OSNotificationDisplayType.notification);
       }
